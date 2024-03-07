@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const ProductTop = () => {
     return (
       <Container>
-        <div style={{height:"500px" ,display:"flex" , justifyContent:"center",alignContent:"center",flexDirection:"column"}}>
+        <div style={{height:"200px" ,display:"flex" , justifyContent:"center",alignContent:"center",flexDirection:"column"}}>
           <div style={{ fontSize: "30px" }}>
             로봇을 접한 사람들에게{" "}
             <span style={{ color: "darkblue", fontWeight: "bold" }}>

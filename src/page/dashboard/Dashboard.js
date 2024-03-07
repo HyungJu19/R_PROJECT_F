@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import SalesVolumeChart from "./item/SalesVolumeChart"; // 경로는 실제 구조에 맞게 조정해주세요.
-import UserFeedbackScoreChart from "./item/UserFeedbackScoreChart"; // 경로는 실제 구조에 맞게 조정해주세요.
-import PerformanceIndicatorChart from "./item/PerformanceIndicatorChart"; // 경로는 실제 구조에 맞게 조정해주세요.
+import SalesVolumeChart from "./item/SalesVolumeChart"; 
+import UserFeedbackScoreChart from "./item/UserFeedbackScoreChart"; 
+import PerformanceIndicatorChart from "./item/PerformanceIndicatorChart"; 
 import { transformPerformanceIndicatorData, transformSalesVolumeData, transformUserFeedbackScoreData } from "./item/ChartData";
 
 const data = {
@@ -25,25 +25,62 @@ const data = {
 
 
 const Dashboard = () => {
+ const backgroundImageUrl =
+   "https://eatablebucket.s3.ap-northeast-2.amazonaws.com/text3.png";
+
 
  const 판매량Data = transformSalesVolumeData(data);
  const 사용자피드백점수Data = transformUserFeedbackScoreData(data);
  const 성능지표BarData = transformPerformanceIndicatorData(data);
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <SalesVolumeChart data={판매량Data} />
-        </Col>
-        <Col>
-          <UserFeedbackScoreChart data={사용자피드백점수Data} />
-        </Col>
-        <Col>
-          <PerformanceIndicatorChart data={성능지표BarData} />
-        </Col>
-      </Row>
-    </Container>
+    <div
+      style={{
+        width: "100%",
+        height: "93.3vh",
+        backgroundSize: "cover",
+        backgroundImage: `url(${backgroundImageUrl})`,
+        position: "relative", // 이 div는 상대적 위치 지정의 기준이 됩니다.
+      }}
+    >
+      <div
+        style={{
+            margin:"auto",
+          width: "100%",
+        }}
+      >
+        <Container style={{ padding: "0px" }}>
+          <div>
+            <img
+              src="https://eatablebucket.s3.ap-northeast-2.amazonaws.com/text1.png"
+              style={{ margin: "30px" }}
+            />
+          </div>
+          <Row
+            style={{
+              backgroundColor: "white",
+              borderRadius: "15px",
+              height: "400px",
+              margin:"auto",
+                paddingTop:"60px"
+            }}
+          >
+            <Col>
+              <span>판매량</span>
+              <SalesVolumeChart data={판매량Data} />
+            </Col>
+            <Col>
+              <span>피드백 점수</span>
+              <UserFeedbackScoreChart data={사용자피드백점수Data} />
+            </Col>
+            <Col>
+              <span>성능지표</span>
+              <PerformanceIndicatorChart data={성능지표BarData} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-// 판매량 데이터를 변환하는 함수
+
 export const transformSalesVolumeData = (data) => ({
   labels: data.판매량.map((item) => item.월),
   datasets: [
@@ -23,7 +23,7 @@ export const transformSalesVolumeData = (data) => ({
   ],
 });
 
-// 사용자 피드백 점수 데이터를 변환하는 함수
+
 export const transformUserFeedbackScoreData = (data) => ({
   labels: data.사용자피드백점수.map((item) => item.제품),
   datasets: [
@@ -45,7 +45,6 @@ export const transformUserFeedbackScoreData = (data) => ({
   ],
 });
 
-// 성능지표 데이터를 변환하는 함수
 export const transformPerformanceIndicatorData = (data) => ({
   labels: data.성능지표.map((item) => item.제품),
   datasets: [

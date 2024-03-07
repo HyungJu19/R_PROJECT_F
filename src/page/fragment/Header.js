@@ -13,8 +13,8 @@ const Header = () => {
       <Container
         style={{
           display: "flex",
-          alignItems: "center", // 세로 가운데 정렬
-          justifyContent: "space-between", // 요소 간 간격 조절
+          alignItems: "center", 
+          justifyContent: "space-between", 
           padding: "0 20px",
         }}
       >
