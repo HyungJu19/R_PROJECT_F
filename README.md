@@ -1,6 +1,6 @@
 안녕하세요
 
-이번 면접전 과제 에 대한 제 작업물을 제출합니다. 본 프로젝트는 비주얼 스튜디오 코드 환경에서 React와 Node.js를 사용하여 구현했습니다. 차트 구현을 위해 Chart.js 및 react-chartjs-2를, 라우팅 관리를 위해 React Router v6를, 그리고 UI 컴포넌트는 React Bootstrap을 활용하였습니다.
+본 프로젝트는 비주얼 스튜디오 코드 환경에서 React와 Node.js를 사용하여 구현했습니다. 차트 구현을 위해 Chart.js 및 react-chartjs-2를, 라우팅 관리를 위해 React Router v6를, 그리고 UI 컴포넌트는 React Bootstrap을 활용하였습니다.
 
 ### 프로젝트 관련 정보
 - **주요 사용 기술:** React, Node.js, Chart.js, React Router v6, React Bootstrap
